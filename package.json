@@ -4,6 +4,7 @@
   "description": "- Local OAuth for signup/login - \"Opinion\"",
   "main": "index.js",
   "scripts": {
+    "build": "tailwind build src/style.css -o public/CSS/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,5 +20,8 @@
     "passport-local": "^1.0.0",
     "postcss": "^8.2.13",
     "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
