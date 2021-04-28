@@ -20,5 +20,8 @@
     "passport-local": "^1.0.0",
     "postcss": "^8.2.13",
     "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
