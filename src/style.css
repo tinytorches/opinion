@@ -1,0 +1,5 @@
+/* Including Tailwind in our CSS */
+/* Importing different parts of the framework that we can see in our public/CSS/style.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

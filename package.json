@@ -4,6 +4,7 @@
   "description": "- Local OAuth for signup/login - \"Opinion\"",
   "main": "index.js",
   "scripts": {
+    "build": "tailwind build src/style.css -o public/CSS/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
