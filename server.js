@@ -11,9 +11,15 @@ const MongoStore = require('connect-mongo')
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
-const mainRoutes = require('.routes/main')
+const mainRoutes = require('./routes/main')
 
+// Setup for EJS
+app.set('view engine', 'ejs')
 
+// Static folder
+app.use(express.static('public'))
+
+// Error: Cannot find module '.routes/main' when trying to run server 🤔
 app.use('/', mainRoutes)
 
 
