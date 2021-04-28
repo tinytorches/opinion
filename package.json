@@ -1,0 +1,23 @@
+{
+  "name": "Binary-Upload-Boom-App",
+  "version": "1.0.0",
+  "description": "- Local OAuth for signup/login - \"Opinion\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2"
+  }
+}
