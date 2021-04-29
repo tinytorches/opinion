@@ -4,7 +4,7 @@
 
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
@@ -28,7 +28,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs')
 
 // Error: Cannot find module '.routes/main' when trying to run server 🤔
-app.use('/', mainRoutes)
+// app.use('/', mainRoutes)
 
 // Middleware function in Express parses information from html forms 
 app.use(express.json())
@@ -37,6 +37,6 @@ app.get('/views', async (req, res) => {
     console.log("Database_URL")
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
 });
