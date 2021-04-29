@@ -39,7 +39,7 @@ app.use('/', mainRoutes)
 app.use(express.json())
 
 app.get('/views', async (req, res) => {
-    console.log(""Database_URL)
+    console.log("Database_URL")
 })
 
 app.listen(
