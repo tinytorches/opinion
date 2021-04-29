@@ -30,8 +30,7 @@ MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
 // Setup for EJS
 app.set('view engine', 'ejs')
 
-// Static folder
-app.use(express.static('public'))
+connectDB(); // invoking the function that connects to the database
 
 // Error: Cannot find module '.routes/main' when trying to run server 🤔
 app.use('/', mainRoutes)
