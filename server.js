@@ -1,6 +1,7 @@
 //Jeremy adding some requirements preliminarily
 //installed express -J
 //installed mongoose -J
+
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +24,19 @@ connectDB(); // invoking the function that connects to the database
 //Static Folder
 app.use(express.static("public"));
 
-app.listen(process.env.PORT, () => {
+// Setup for EJS
+app.set('view engine', 'ejs')
+
+// Error: Cannot find module '.routes/main' when trying to run server 🤔
+app.use('/', mainRoutes)
+
+// Middleware function in Express parses information from html forms 
+app.use(express.json())
+
+app.get('/views', async (req, res) => {
+    console.log("Database_URL")
+})
+
+app.listen(PORT, () => {
   console.log("Server is running, you better catch it!");
 });

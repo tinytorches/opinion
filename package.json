@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tailwind build src/style.css -o public/CSS/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
