@@ -11,10 +11,18 @@ const MongoStore = require("connect-mongo");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
-const mainRoutes = require(".routes/main");
+// const mainRoutes = require(".routes/main"); // commented to run server
 
-app.use("/", mainRoutes);
+// app.use("/", mainRoutes);
+
+//Use .env file in config folder
+require("dotenv").config({ path: "./config/.env" });
 
 connectDB(); // invoking the function that connects to the database
 
-app.listen(PORT, console.log(`Server running on port ${PORT}`));
+//Static Folder
+app.use(express.static("public"));
+
+app.listen(process.env.PORT, () => {
+  console.log("Server is running, you better catch it!");
+});

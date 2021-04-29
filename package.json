@@ -5,18 +5,23 @@
   "main": "index.js",
   "scripts": {
     "build": "tailwind build src/style.css -o public/CSS/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.2.5",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-flash": "0.0.2",
     "express-session": "^1.17.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.6",
+    "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "postcss": "^8.2.13",
